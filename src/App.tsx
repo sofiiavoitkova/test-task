@@ -10,7 +10,7 @@ function App() {
 
   useEffect(() => {
     setItems(generateItems(1000));
-  });
+  }, []);
 
   return (
     <>
