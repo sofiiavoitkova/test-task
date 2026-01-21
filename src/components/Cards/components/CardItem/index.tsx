@@ -6,9 +6,14 @@ interface Props {
 }
 
 export function CardItem({ item }: Props) {
+  const isWhite = item.color === "#ffffffff";
+
   return (
-    <div className={styles.card} style={{ backgroundColor: item.color }}>
-      <div className={styles.id}>#{item.id}</div>
+    <div
+      className={`${styles.card} ${isWhite ? styles.white : ""}`}
+      style={!isWhite ? { backgroundColor: item.color } : undefined}
+    >
+      <div className={styles.label}>{item.label}</div>
       <div className={styles.text}>{item.text}</div>
     </div>
   );
