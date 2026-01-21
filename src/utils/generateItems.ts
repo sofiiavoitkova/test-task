@@ -1,16 +1,12 @@
 import type { Item } from "../shared/types";
 import { COLORS } from "../shared/constants";
 
-function generateNumbers(digit: number, length: number = 4) {
+function generateLabel(index: number, length: number): number {
+  const digit = (index % 9) + 1;
   return Number(String(digit).repeat(length));
 }
 
-export function generateDisplayNumber(index: number): number {
-  const digit = (index % 9) + 1;
-  return generateNumbers(digit);
-}
-
-export function generateCardText(): string {
+function generateText(): string {
   const words = ["tekst", "tekst", "tekst"];
   const firstLine = "Tekst " + words.join(" ");
   const secondLine = words.join(" ");
@@ -18,15 +14,10 @@ export function generateCardText(): string {
 }
 
 export function generateItems(count: number): Item[] {
-  const items: Item[] = [];
-
-  for (let i = 0; i < count; i++) {
-    items.push({
-      id: generateDisplayNumber(i),
-      text: generateCardText(),
-      color: COLORS[i % COLORS.length],
-    });
-  }
-
-  return items;
+  return Array.from({ length: count }, (_, i) => ({
+    id: i + 1,
+    label: generateLabel(i, 4),
+    text: generateText(),
+    color: COLORS[Math.floor(Math.random() * COLORS.length)],
+  }));
 }
