@@ -1,0 +1,28 @@
+.container {
+  min-height: 100vh;
+  background: #ffffff;
+  width: 100%;
+}
+
+.top {
+  height: 50vh;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.bottom {
+  height: 50vh;
+  position: relative;
+  padding-top: 10px;
+}
+
+.bottom::before {
+  content: "";
+  display: block;
+  border-top: 1px solid #636262;
+}
