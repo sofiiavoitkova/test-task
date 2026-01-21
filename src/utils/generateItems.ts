@@ -7,7 +7,7 @@ function generateLabel(index: number, length: number): number {
 }
 
 function generateText(): string {
-  const firstLine = "Tekst " + TEXT_WORDS.join(" ");
+  const firstLine = TEXT_WORDS.join(" ");
   const secondLine = TEXT_WORDS.join(" ");
   return firstLine + "\n" + secondLine;
 }
