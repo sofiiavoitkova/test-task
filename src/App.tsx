@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
-import type { Item } from "./shared/types";
 import { Cards } from "./components/Cards";
 import { Balls } from "./components/Balls";
 import { generateDisplayNumber, generateCardText } from "./utils/generateItems";
-
+import type { Item } from "./shared/types";
+import { COLORS } from "./shared/constants";
 import "./App.css";
-
-const COLORS = ["#2ecc71", "#3498db", "#1abc9c", "#16a085"];
 
 function generateItems(count: number): Item[] {
   const items: Item[] = [];
