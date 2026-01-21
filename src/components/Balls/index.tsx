@@ -8,7 +8,7 @@ interface Props {
 
 export function Balls({ count, color }: Props) {
   return (
-    <div className={styles.balls}>
+    <div className={styles.grid}>
       {Array.from({ length: count }).map((_, index) => (
         <BallItem key={index} color={color} />
       ))}
