@@ -1,2 +1,2 @@
-export const COLORS = ["#2ecc71", "#3498db", "#1abc9c", "#16a085"];
+export const COLORS = ["#ffffffff", "#0d006cff", "#00b106ff"];
 export const TEXT_WORDS = ["tekst", "tekst", "tekst"];
