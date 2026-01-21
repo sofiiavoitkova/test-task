@@ -1,5 +1,5 @@
 import type { Item } from "../shared/types";
-import { COLORS } from "../shared/constants";
+import { COLORS, TEXT_WORDS } from "../shared/constants";
 
 function generateLabel(index: number, length: number): number {
   const digit = (index % 9) + 1;
@@ -7,9 +7,8 @@ function generateLabel(index: number, length: number): number {
 }
 
 function generateText(): string {
-  const words = ["tekst", "tekst", "tekst"];
-  const firstLine = "Tekst " + words.join(" ");
-  const secondLine = words.join(" ");
+  const firstLine = "Tekst " + TEXT_WORDS.join(" ");
+  const secondLine = TEXT_WORDS.join(" ");
   return firstLine + "\n" + secondLine;
 }
 
