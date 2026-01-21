@@ -8,7 +8,7 @@ interface Props {
 
 export function Cards({ items }: Props) {
   return (
-    <div className={styles.card}>
+    <div className={styles.grid}>
       {items.map((item) => (
         <CardItem key={item.id} item={item} />
       ))}
