@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
-import type { Item } from "../shared/types";
-import { COLORS } from "../shared/constants";
-import { generateContent } from "./generateItems";
+import type { Item } from "@shared/types";
+import { COLORS } from "@shared/constants";
+import { generateContent } from "@utils/generateItems";
 
 export function createItem(): Item {
   return {

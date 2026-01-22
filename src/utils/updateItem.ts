@@ -1,6 +1,6 @@
-import type { Item } from "../shared/types";
-import { COLORS } from "../shared/constants";
-import { generateRandomContent } from "./generateItems";
+import type { Item } from "@shared/types";
+import { COLORS } from "@shared/constants";
+import { generateRandomContent } from "@utils/generateItems";
 
 export function updateRandomItem(items: Item[]): Item[] {
   if (items.length === 0) return items;

@@ -1,5 +1,5 @@
-import CardItem from "../../CardItem";
-import type { Item } from "../../../shared/types";
+import CardItem from "@components/CardItem";
+import type { Item } from "@shared/types";
 import styles from "./cards.module.scss";
 
 interface Props {

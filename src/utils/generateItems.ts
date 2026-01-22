@@ -1,6 +1,6 @@
-import type { Item } from "../shared/types";
-import { TEXT_WORDS, LOREM_WORDS } from "../shared/constants";
-import { createItem } from "./createItem";
+import type { Item } from "@shared/types";
+import { TEXT_WORDS, LOREM_WORDS } from "@shared/constants";
+import { createItem } from "@utils/createItem";
 
 export function generateNumber(length: number = 4): number {
   const digit = Math.floor(Math.random() * 9) + 1;
