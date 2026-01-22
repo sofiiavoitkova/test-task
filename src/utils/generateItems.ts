@@ -1,5 +1,5 @@
 import type { Item } from "../shared/types";
-import { TEXT_WORDS } from "../shared/constants";
+import { TEXT_WORDS, LOREM_WORDS } from "../shared/constants";
 import { createItem } from "./createItem";
 
 export function generateNumber(length: number = 4): number {
@@ -10,7 +10,7 @@ export function generateNumber(length: number = 4): number {
 export function generateContent(): string {
   const label = generateNumber();
 
-  const firstLine = `Text ${TEXT_WORDS.slice(0, 2).join(" ")}`;
+  const firstLine = `Tekst ${TEXT_WORDS.slice(0, 2).join(" ")}`;
   const secondLine = TEXT_WORDS.join(" ");
 
   return `${label}\n${firstLine}\n${secondLine}`;
@@ -18,4 +18,20 @@ export function generateContent(): string {
 
 export function generateItems(count: number): Item[] {
   return Array.from({ length: count }, () => createItem());
+}
+
+function randomWords(count: number): string {
+  return Array.from(
+    { length: count },
+    () => LOREM_WORDS[Math.floor(Math.random() * LOREM_WORDS.length)],
+  ).join(" ");
+}
+
+export function generateRandomContent(): string {
+  const label = generateNumber();
+
+  const firstLine = randomWords(3);
+  const secondLine = randomWords(3);
+
+  return `${label}\n${firstLine}\n${secondLine}`;
 }

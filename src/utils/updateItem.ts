@@ -1,6 +1,6 @@
 import type { Item } from "../shared/types";
 import { COLORS } from "../shared/constants";
-import { generateContent } from "./generateItems";
+import { generateRandomContent } from "./generateItems";
 
 export function updateRandomItem(items: Item[]): Item[] {
   if (items.length === 0) return items;
@@ -15,7 +15,7 @@ export function updateRandomItem(items: Item[]): Item[] {
 
     return {
       id: item.id,
-      text: generateContent(),
+      text: generateRandomContent(),
       color: randomColor,
     };
   });
