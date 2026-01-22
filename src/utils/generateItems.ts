@@ -8,7 +8,7 @@ export function generateLabel(index: number, length: number): number {
 }
 
 export function generateText(): string {
-  const firstLine = TEXT_WORDS.join(" ");
+  const firstLine = `Text ${TEXT_WORDS.slice(0, 2).join(" ")}`;
   const secondLine = TEXT_WORDS.join(" ");
   return firstLine + "\n" + secondLine;
 }
