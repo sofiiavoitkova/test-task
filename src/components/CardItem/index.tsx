@@ -1,5 +1,6 @@
 import { memo } from "react";
-import type { Item } from "../../shared/types";
+import cls from "classnames";
+import type { Item } from "@shared/types";
 import styles from "./cardItem.module.scss";
 
 interface Props {
@@ -7,17 +8,8 @@ interface Props {
 }
 
 function CardItem({ item }: Props) {
-  const isWhite = item.color === "#ffffffff";
-
   return (
-    <div
-      className={`${styles.card} ${isWhite ? styles.white : ""}`}
-      style={
-        !isWhite
-          ? { backgroundColor: item.color }
-          : { backgroundColor: "#ffffffff" }
-      }
-    >
+    <div className={cls(styles.card, styles[item.color])}>
       <div className={styles.text}>{item.text}</div>
     </div>
   );
