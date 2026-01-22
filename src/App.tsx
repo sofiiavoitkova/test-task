@@ -6,6 +6,7 @@ import { generateItems } from "./utils/generateItems";
 import { createItem } from "./utils/createItem";
 import { updateRandomItem } from "./utils/updateItem";
 import type { Item } from "./shared/types";
+import { BALL_COLOR } from "./shared/constants";
 import styles from "./app.module.scss";
 
 function App() {
@@ -37,7 +38,7 @@ function App() {
           <div className={styles.button}>
             <Button onClick={handleAddItem} />
           </div>
-          <Balls count={items.length} color="#ff6b6b" />
+          <Balls count={items.length} color={BALL_COLOR} />
         </div>
       </div>
     </>
