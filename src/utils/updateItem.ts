@@ -15,7 +15,6 @@ export function updateRandomItem(items: Item[]): Item[] {
 
     return {
       id: item.id,
-      label: item.label,
       text: generateText(),
       color: randomColor,
     };

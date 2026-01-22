@@ -18,7 +18,6 @@ function CardItem({ item }: Props) {
           : { backgroundColor: "#ffffffff" }
       }
     >
-      <div className={styles.label}>{item.label}</div>
       <div className={styles.text}>{item.text}</div>
     </div>
   );

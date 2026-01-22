@@ -25,7 +25,7 @@ function App() {
   }, []);
 
   const handleAddItem = () => {
-    setItems((prev) => [...prev, createItem(prev.length)]);
+    setItems((prev) => [...prev, createItem()]);
   };
 
   return (
