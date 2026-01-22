@@ -4,7 +4,7 @@ interface Props {
   onClick: () => void;
 }
 
-export function Button({ onClick }: Props) {
+export default function Button({ onClick }: Props) {
   return (
     <button className={styles.button} onClick={onClick}>
       Add item

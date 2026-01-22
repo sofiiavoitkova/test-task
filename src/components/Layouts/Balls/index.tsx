@@ -1,4 +1,5 @@
-import { BallItem } from "./components/BallItem";
+import { memo } from "react";
+import { BallItem } from "../../BallItem";
 import styles from "./balls.module.scss";
 
 interface Props {
@@ -6,7 +7,7 @@ interface Props {
   color: string;
 }
 
-export function Balls({ count, color }: Props) {
+function Balls({ count, color }: Props) {
   return (
     <div className={styles.grid}>
       {Array.from({ length: count }).map((_, index) => (
@@ -15,3 +16,5 @@ export function Balls({ count, color }: Props) {
     </div>
   );
 }
+
+export default memo(Balls);

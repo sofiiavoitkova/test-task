@@ -1,12 +1,12 @@
-import { CardItem } from "./components/CardItem";
-import type { Item } from "../../shared/types";
+import CardItem from "../../CardItem";
+import type { Item } from "../../../shared/types";
 import styles from "./cards.module.scss";
 
 interface Props {
   items: Item[];
 }
 
-export function Cards({ items }: Props) {
+export default function Cards({ items }: Props) {
   return (
     <div className={styles.grid}>
       {items.map((item) => (

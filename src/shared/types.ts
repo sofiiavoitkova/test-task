@@ -1,6 +1,6 @@
-export interface Item{
-    id: number;
-    label: number;
-    text: string;
-    color: string;
+export interface Item {
+  id: number;
+  label: number;
+  text: string;
+  color: string;
 }

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { Cards } from "./components/Cards";
-import { Balls } from "./components/Balls";
-import { Button } from "./components/Button";
+import Cards from "./components/Layouts/Cards";
+import Balls from "./components/Layouts/Balls";
+import Button from "./components/Button";
 import { generateItems } from "./utils/generateItems";
 import { createItem } from "./utils/createItem";
 import { updateRandomItem } from "./utils/updateItem";
@@ -13,7 +13,7 @@ function App() {
   const [items, setItems] = useState<Item[]>([]);
 
   useEffect(() => {
-    setItems(generateItems(1000));
+    setItems(generateItems(30));
   }, []);
 
   useEffect(() => {
