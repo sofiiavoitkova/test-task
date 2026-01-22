@@ -13,7 +13,7 @@ function App() {
   const [items, setItems] = useState<Item[]>([]);
 
   useEffect(() => {
-    setItems(generateItems(30));
+    setItems(generateItems(1000));
   }, []);
 
   useEffect(() => {
