@@ -1,5 +1,5 @@
 import type { Item } from "../shared/types";
-import { COLORS} from "../shared/constants";
+import { COLORS } from "../shared/constants";
 import { generateLabel, generateText } from "./generateItems";
 
 export function createItem(index: number): Item {
